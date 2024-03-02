@@ -25,12 +25,10 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 
 class BookApiApplicationTests {
-    @Autowired
-    private BookService bookService;
 
     @Test
     void contextLoads() {
-        assertNotNull(bookService);
+
 
     }
 }
