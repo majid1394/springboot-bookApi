@@ -27,6 +27,7 @@ bookApi\Configuration\SwaggerConfig.class
 bookApi\runner\config\HibernateJPA_Configuration.class
 bookApi\service\BookServiceImpl.class
 bookApi\model\Book.class
+bookApi\rest\HomeController.class
 bookApi\rest\dto\LoginRequest.class
 bookApi\BookApiApplication.class
 bookApi\rest\AuthController.class

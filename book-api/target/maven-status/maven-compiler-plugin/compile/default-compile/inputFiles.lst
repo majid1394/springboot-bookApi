@@ -20,6 +20,7 @@ G:\Projects\springboot-backend-bookApi\book-api\src\main\java\bookApi\service\Bo
 G:\Projects\springboot-backend-bookApi\book-api\src\main\java\bookApi\Configuration\PersistenceJPAConfig.java
 G:\Projects\springboot-backend-bookApi\book-api\src\main\java\bookApi\security\CorsConfig.java
 G:\Projects\springboot-backend-bookApi\book-api\src\main\java\bookApi\rest\dto\SignUpRequest.java
+G:\Projects\springboot-backend-bookApi\book-api\src\main\java\bookApi\rest\HomeController.java
 G:\Projects\springboot-backend-bookApi\book-api\src\main\java\bookApi\security\WebSecurityConfig.java
 G:\Projects\springboot-backend-bookApi\book-api\src\main\java\bookApi\mapper\exception\DuplicatedUserInfoException.java
 G:\Projects\springboot-backend-bookApi\book-api\src\main\java\bookApi\mapper\exception\UserNotFoundException.java

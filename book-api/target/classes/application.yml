@@ -13,7 +13,12 @@ app:
   cors:
     allowed-origins: http://localhost:3000
 
+
+  #In summary, if you need more advanced logging configurations or want to use Logback-specific features,
+  #you should use the `logback-spring.xml` file. If you prefer a simpler configuration or want to stick to
+  #Spring Boot's default logging settings, you can use the `application.properties` or `application.yaml` file for logging configuration.
 logging:
   level:
     org.springframework.security: DEBUG
     # org.hibernate.SQL: DEBUG
+    #loggin.level.root=WARN or loggin.level.com.baeldung=TRACE in application.properties

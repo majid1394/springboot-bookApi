@@ -1,2 +1,7 @@
+G:\Projects\springboot-backend-bookApi\book-api\src\test\java\bookApi\SmokeTest.java
+G:\Projects\springboot-backend-bookApi\book-api\src\test\java\bookApi\ExcludeAutoConfig1IntegrationTest.java
 G:\Projects\springboot-backend-bookApi\book-api\src\test\java\bookApi\TestApplication.java
 G:\Projects\springboot-backend-bookApi\book-api\src\test\java\bookApi\BookApiApplicationTests.java
+G:\Projects\springboot-backend-bookApi\book-api\src\test\java\bookApi\ExcludeAutoConfig3IntegrationTest.java
+G:\Projects\springboot-backend-bookApi\book-api\src\test\java\bookApi\LoadSpringContextIntegrationTest.java
+G:\Projects\springboot-backend-bookApi\book-api\src\test\java\bookApi\HttpRequestTest.java

@@ -4,6 +4,8 @@ import bookApi.mapper.exception.BookNotFoundException;
 import bookApi.repository.BookRepository;
 import bookApi.model.Book;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +13,13 @@ import java.util.List;
 @RequiredArgsConstructor
 @Service
 public class BookServiceImpl implements BookService {
+
+
+    private static Logger logger = LoggerFactory.getLogger(BookService.class);
+
+    public void execute(String bookServices) {
+        logger.info("do " + bookServices);
+    }
 
     private final BookRepository bookRepository;
 

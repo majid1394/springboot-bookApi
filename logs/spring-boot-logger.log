@@ -1,0 +1,434 @@
+2024-03-06 08:55:40,643 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@1af1347d - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@632aa1a3 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:171)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:149)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:137)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:377)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:329)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347)
+	at bookApi.BookApiApplication.main(BookApiApplication.java:17)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@1af1347d - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@632aa1a3 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:277)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:255)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:81)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:61)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:189)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:332)
+	... 19 common frames omitted
+	Suppressed: java.lang.NumberFormatException: For input string: "1."
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Integer.parseInt(Integer.java:661)
+		at java.base/java.lang.Integer.parseInt(Integer.java:777)
+		at ch.qos.logback.classic.pattern.NamedConverter.start(NamedConverter.java:92)
+		at ch.qos.logback.core.pattern.ConverterUtil.startConverters(ConverterUtil.java:37)
+		at ch.qos.logback.core.pattern.ConverterUtil.startConverters(ConverterUtil.java:33)
+		at ch.qos.logback.core.pattern.PatternLayoutBase.start(PatternLayoutBase.java:90)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandleComplex(ImplicitModelHandler.java:208)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandle(ImplicitModelHandler.java:186)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:257)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:208)
+		at org.springframework.boot.logging.logback.SpringBootJoranConfigurator.processModel(SpringBootJoranConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:170)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:65)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:287)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.lambda$loadConfiguration$1(LogbackLoggingSystem.java:249)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.withLoggingSuppressed(LogbackLoggingSystem.java:467)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:244)
+		... 23 common frames omitted
+	Suppressed: java.lang.NumberFormatException: For input string: "1."
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Integer.parseInt(Integer.java:661)
+		at java.base/java.lang.Integer.parseInt(Integer.java:777)
+		at ch.qos.logback.classic.pattern.NamedConverter.start(NamedConverter.java:92)
+		at ch.qos.logback.core.pattern.ConverterUtil.startConverters(ConverterUtil.java:37)
+		at ch.qos.logback.core.pattern.PatternLayoutBase.start(PatternLayoutBase.java:90)
+		at ch.qos.logback.classic.encoder.PatternLayoutEncoder.start(PatternLayoutEncoder.java:28)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandleComplex(ImplicitModelHandler.java:208)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandle(ImplicitModelHandler.java:186)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:257)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:208)
+		at org.springframework.boot.logging.logback.SpringBootJoranConfigurator.processModel(SpringBootJoranConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:170)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:65)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:287)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.lambda$loadConfiguration$1(LogbackLoggingSystem.java:249)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.withLoggingSuppressed(LogbackLoggingSystem.java:467)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:244)
+		... 23 common frames omitted
+2024-03-06 09:45:47,440 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@54f5f647 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:171)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:149)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:137)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:377)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:329)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347)
+	at bookApi.BookApiApplication.main(BookApiApplication.java:17)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@54f5f647 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:277)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:255)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:81)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:61)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:189)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:332)
+	... 19 common frames omitted
+	Suppressed: java.lang.NumberFormatException: For input string: "1."
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Integer.parseInt(Integer.java:661)
+		at java.base/java.lang.Integer.parseInt(Integer.java:777)
+		at ch.qos.logback.classic.pattern.NamedConverter.start(NamedConverter.java:92)
+		at ch.qos.logback.core.pattern.ConverterUtil.startConverters(ConverterUtil.java:37)
+		at ch.qos.logback.core.pattern.PatternLayoutBase.start(PatternLayoutBase.java:90)
+		at ch.qos.logback.classic.encoder.PatternLayoutEncoder.start(PatternLayoutEncoder.java:28)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandleComplex(ImplicitModelHandler.java:208)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandle(ImplicitModelHandler.java:186)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:257)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:208)
+		at org.springframework.boot.logging.logback.SpringBootJoranConfigurator.processModel(SpringBootJoranConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:170)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:65)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:287)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.lambda$loadConfiguration$1(LogbackLoggingSystem.java:249)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.withLoggingSuppressed(LogbackLoggingSystem.java:467)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:244)
+		... 23 common frames omitted
+2024-03-06 09:46:41,045 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-03-06 09:46:41,102 INFO o.s.b.StartupInfoLogger [main] Starting BookApiApplication using Java 21.0.1 with PID 11760 (G:\Projects\springboot-backend-bookApi\book-api\target\classes started by internet in G:\Projects\springboot-backend-bookApi)
+2024-03-06 09:46:41,104 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-06 09:46:42,132 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-06 09:46:42,207 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2024-03-06 09:46:42,519 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'persistenceJPAConfig' of type [bookApi.Configuration.PersistenceJPAConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [exceptionTranslation] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-03-06 09:46:42,889 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-03-06 09:46:42,901 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-06 09:46:42,903 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-03-06 09:46:42,903 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-03-06 09:46:42,987 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-03-06 09:46:42,988 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1831 ms
+2024-03-06 09:46:43,138 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-06 09:46:43,206 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-06 09:46:43,250 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-03-06 09:46:43,629 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-06 09:46:44,029 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-06 09:46:45,113 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-06 09:46:45,259 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-06 09:46:45,896 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-06 09:46:46,250 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3d339541, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c1adb8a, org.springframework.security.web.context.SecurityContextHolderFilter@75eca6d8, org.springframework.security.web.header.HeaderWriterFilter@505bc480, org.springframework.web.filter.CorsFilter@72364a40, org.springframework.security.web.authentication.logout.LogoutFilter@46c47690, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@30b5f974, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6cb2d5ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ed1446c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ad2cb6d, org.springframework.security.web.session.SessionManagementFilter@533165e7, org.springframework.security.web.access.ExceptionTranslationFilter@282d1023, org.springframework.security.web.access.intercept.AuthorizationFilter@5f7dbdfa]
+2024-03-06 09:46:46,623 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-06 09:46:46,668 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2024-03-06 09:46:46,680 INFO o.s.b.StartupInfoLogger [main] Started BookApiApplication in 6.26 seconds (process running for 16.068)
+2024-03-06 09:47:49,673 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 09:47:49,674 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-03-06 09:47:49,676 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2024-03-06 09:47:49,701 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Securing GET /api/books
+2024-03-06 09:47:50,016 DEBUG o.s.s.a.d.AbstractUserDetailsAuthenticationProvider [http-nio-8080-exec-1] Authenticated user
+2024-03-06 09:47:50,017 DEBUG o.s.s.w.a.w.BasicAuthenticationFilter [http-nio-8080-exec-1] Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=admin, password=$2a$10$F3L.1FipOGVxa/cphHizwOsYeAWoK82KTRb5RPwcTxDDDSOCTwod2, name=Admin, email=admin@mycompany.com, authorities=[ADMIN]), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ADMIN]]
+2024-03-06 09:47:50,021 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Secured GET /api/books
+2024-03-06 09:47:57,173 INFO b.r.BookController [http-nio-8080-exec-1] An INFO Message
+2024-03-06 09:47:57,174 WARN b.r.BookController [http-nio-8080-exec-1] A WARN Message
+2024-03-06 09:47:57,174 ERROR b.r.BookController [http-nio-8080-exec-1] An ERROR Message
+2024-03-06 09:53:58,762 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-03-06 09:53:58,816 INFO o.s.b.StartupInfoLogger [main] Starting BookApiApplication using Java 21.0.1 with PID 18428 (G:\Projects\springboot-backend-bookApi\book-api\target\classes started by internet in G:\Projects\springboot-backend-bookApi)
+2024-03-06 09:53:58,818 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-06 09:53:59,808 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-06 09:53:59,878 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2024-03-06 09:54:00,270 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'persistenceJPAConfig' of type [bookApi.Configuration.PersistenceJPAConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [exceptionTranslation] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-03-06 09:54:00,636 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-03-06 09:54:00,660 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-06 09:54:00,662 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-03-06 09:54:00,662 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-03-06 09:54:00,739 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-03-06 09:54:00,740 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1868 ms
+2024-03-06 09:54:00,890 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-06 09:54:00,955 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-06 09:54:00,997 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-03-06 09:54:01,370 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-06 09:54:01,645 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-06 09:54:02,847 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-06 09:54:02,953 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-06 09:54:03,734 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-06 09:54:04,119 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6ad2cb6d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b6ad2eb, org.springframework.security.web.context.SecurityContextHolderFilter@3ed1446c, org.springframework.security.web.header.HeaderWriterFilter@58a93f51, org.springframework.web.filter.CorsFilter@61868687, org.springframework.security.web.authentication.logout.LogoutFilter@39bd07fe, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6810465, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54151d07, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e729fea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2122b4bd, org.springframework.security.web.session.SessionManagementFilter@75eca6d8, org.springframework.security.web.access.ExceptionTranslationFilter@394a7390, org.springframework.security.web.access.intercept.AuthorizationFilter@2da3d7d3]
+2024-03-06 09:54:04,599 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-06 09:54:04,662 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2024-03-06 09:54:04,676 INFO o.s.b.StartupInfoLogger [main] Started BookApiApplication in 6.531 seconds (process running for 77.989)
+2024-03-06 09:54:07,833 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 09:54:07,833 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-03-06 09:54:07,835 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2024-03-06 09:54:07,859 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Securing GET /api/books
+2024-03-06 09:54:08,188 DEBUG o.s.s.a.d.AbstractUserDetailsAuthenticationProvider [http-nio-8080-exec-1] Authenticated user
+2024-03-06 09:54:08,190 DEBUG o.s.s.w.a.w.BasicAuthenticationFilter [http-nio-8080-exec-1] Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=admin, password=$2a$10$F3L.1FipOGVxa/cphHizwOsYeAWoK82KTRb5RPwcTxDDDSOCTwod2, name=Admin, email=admin@mycompany.com, authorities=[ADMIN]), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ADMIN]]
+2024-03-06 09:54:08,194 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Secured GET /api/books
+2024-03-06 09:54:10,925 INFO b.r.BookController [http-nio-8080-exec-1] An INFO Message
+2024-03-06 09:54:10,925 WARN b.r.BookController [http-nio-8080-exec-1] A WARN Message
+2024-03-06 09:54:10,925 ERROR b.r.BookController [http-nio-8080-exec-1] An ERROR Message
+2024-03-06 09:55:43,216 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Securing GET /api/books
+2024-03-06 09:55:43,427 DEBUG o.s.s.a.d.AbstractUserDetailsAuthenticationProvider [http-nio-8080-exec-3] Authenticated user
+2024-03-06 09:55:43,428 DEBUG o.s.s.w.a.w.BasicAuthenticationFilter [http-nio-8080-exec-3] Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=admin, password=$2a$10$F3L.1FipOGVxa/cphHizwOsYeAWoK82KTRb5RPwcTxDDDSOCTwod2, name=Admin, email=admin@mycompany.com, authorities=[ADMIN]), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ADMIN]]
+2024-03-06 09:55:43,428 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-3] Secured GET /api/books
+2024-03-06 09:55:46,060 INFO b.r.BookController [http-nio-8080-exec-3] An INFO Message
+2024-03-06 09:55:46,060 WARN b.r.BookController [http-nio-8080-exec-3] A WARN Message
+2024-03-06 09:55:46,061 ERROR b.r.BookController [http-nio-8080-exec-3] An ERROR Message
+2024-03-06 10:58:53,466 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Securing GET /
+2024-03-06 10:58:53,467 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter [http-nio-8080-exec-5] Set SecurityContextHolder to anonymous SecurityContext
+2024-03-06 10:58:53,468 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Secured GET /
+2024-03-06 10:58:56,295 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Securing GET /home
+2024-03-06 10:58:56,296 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Secured GET /home
+2024-03-06 10:58:56,305 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Securing GET /error
+2024-03-06 10:58:56,306 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-5] Secured GET /error
+2024-03-06 10:58:56,325 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter [http-nio-8080-exec-5] Set SecurityContextHolder to anonymous SecurityContext
+2024-03-06 10:58:56,354 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-6] Securing GET /favicon.ico
+2024-03-06 10:58:56,357 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter [http-nio-8080-exec-6] Set SecurityContextHolder to anonymous SecurityContext
+2024-03-06 10:58:56,359 DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint [http-nio-8080-exec-6] Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-03-06 10:58:56,360 DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint [http-nio-8080-exec-6] No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@368de54a
+2024-03-06 10:58:56,362 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-6] Securing GET /error
+2024-03-06 10:58:56,362 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-6] Secured GET /error
+2024-03-06 10:58:56,574 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter [http-nio-8080-exec-6] Set SecurityContextHolder to anonymous SecurityContext
+2024-03-06 10:58:56,807 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Securing GET /favicon.ico
+2024-03-06 10:58:56,926 DEBUG o.s.s.a.d.AbstractUserDetailsAuthenticationProvider [http-nio-8080-exec-7] Authenticated user
+2024-03-06 10:58:56,926 DEBUG o.s.s.w.a.w.BasicAuthenticationFilter [http-nio-8080-exec-7] Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=admin, password=$2a$10$F3L.1FipOGVxa/cphHizwOsYeAWoK82KTRb5RPwcTxDDDSOCTwod2, name=Admin, email=admin@mycompany.com, authorities=[ADMIN]), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ADMIN]]
+2024-03-06 10:58:56,927 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Secured GET /favicon.ico
+2024-03-06 10:58:56,930 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Securing GET /error
+2024-03-06 10:58:56,931 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-7] Secured GET /error
+2024-03-06 10:59:03,749 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] Securing GET /api/books1
+2024-03-06 10:59:03,890 DEBUG o.s.s.a.d.AbstractUserDetailsAuthenticationProvider [http-nio-8080-exec-8] Authenticated user
+2024-03-06 10:59:03,890 DEBUG o.s.s.w.a.w.BasicAuthenticationFilter [http-nio-8080-exec-8] Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=admin, password=$2a$10$F3L.1FipOGVxa/cphHizwOsYeAWoK82KTRb5RPwcTxDDDSOCTwod2, name=Admin, email=admin@mycompany.com, authorities=[ADMIN]), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ADMIN]]
+2024-03-06 10:59:03,891 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] Secured GET /api/books1
+2024-03-06 10:59:03,894 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] Securing GET /error
+2024-03-06 10:59:03,894 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] Secured GET /error
+2024-03-06 10:59:22,437 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-9] Securing GET /api/books1
+2024-03-06 10:59:22,601 DEBUG o.s.s.a.d.AbstractUserDetailsAuthenticationProvider [http-nio-8080-exec-9] Authenticated user
+2024-03-06 10:59:22,602 DEBUG o.s.s.w.a.w.BasicAuthenticationFilter [http-nio-8080-exec-9] Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=admin, password=$2a$10$F3L.1FipOGVxa/cphHizwOsYeAWoK82KTRb5RPwcTxDDDSOCTwod2, name=Admin, email=admin@mycompany.com, authorities=[ADMIN]), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ADMIN]]
+2024-03-06 10:59:22,602 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-9] Secured GET /api/books1
+2024-03-06 10:59:22,606 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-9] Securing GET /error
+2024-03-06 10:59:22,607 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-9] Secured GET /error
+2024-03-06 11:00:48,373 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-2] Securing GET /api/books
+2024-03-06 11:00:48,493 DEBUG o.s.s.a.d.AbstractUserDetailsAuthenticationProvider [http-nio-8080-exec-2] Authenticated user
+2024-03-06 11:00:48,493 DEBUG o.s.s.w.a.w.BasicAuthenticationFilter [http-nio-8080-exec-2] Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=admin, password=$2a$10$F3L.1FipOGVxa/cphHizwOsYeAWoK82KTRb5RPwcTxDDDSOCTwod2, name=Admin, email=admin@mycompany.com, authorities=[ADMIN]), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ADMIN]]
+2024-03-06 11:00:48,494 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-2] Secured GET /api/books
+2024-03-06 11:00:51,027 INFO b.r.BookController [http-nio-8080-exec-2] An INFO Message
+2024-03-06 11:00:51,028 WARN b.r.BookController [http-nio-8080-exec-2] A WARN Message
+2024-03-06 11:00:51,028 ERROR b.r.BookController [http-nio-8080-exec-2] An ERROR Message
+2024-03-06 11:06:02,255 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-03-06 11:06:02,311 INFO o.s.b.StartupInfoLogger [main] Starting BookApiApplication using Java 21.0.1 with PID 16448 (G:\Projects\springboot-backend-bookApi\book-api\target\classes started by internet in G:\Projects\springboot-backend-bookApi)
+2024-03-06 11:06:02,313 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-06 11:06:03,280 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-06 11:06:03,352 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+2024-03-06 11:06:03,687 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'persistenceJPAConfig' of type [bookApi.Configuration.PersistenceJPAConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [exceptionTranslation] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-03-06 11:06:04,121 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-03-06 11:06:04,133 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-06 11:06:04,135 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-03-06 11:06:04,136 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-03-06 11:06:04,221 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-03-06 11:06:04,222 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1854 ms
+2024-03-06 11:06:04,361 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-06 11:06:04,430 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-06 11:06:04,473 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-03-06 11:06:04,822 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-06 11:06:05,095 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-06 11:06:06,208 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-06 11:06:06,288 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-06 11:06:07,010 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-06 11:06:07,409 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@42af2977, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14acc33e, org.springframework.security.web.context.SecurityContextHolderFilter@693c7741, org.springframework.security.web.header.HeaderWriterFilter@6cb2d5ea, org.springframework.web.filter.CorsFilter@6cbb79c3, org.springframework.security.web.authentication.logout.LogoutFilter@173c0722, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3f7b15bb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@175c4ae5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21bf1b1f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7bc46dde, org.springframework.security.web.session.SessionManagementFilter@4a2bc71f, org.springframework.security.web.access.ExceptionTranslationFilter@75eca6d8, org.springframework.security.web.access.intercept.AuthorizationFilter@6810465]
+2024-03-06 11:06:07,858 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-06 11:06:07,915 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2024-03-06 11:06:07,928 INFO o.s.b.StartupInfoLogger [main] Started BookApiApplication in 6.329 seconds (process running for 8.812)
+2024-03-06 11:06:24,312 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-03-06 11:06:24,364 INFO o.s.b.StartupInfoLogger [main] Starting BookApiApplication using Java 21.0.1 with PID 18140 (G:\Projects\springboot-backend-bookApi\book-api\target\classes started by internet in G:\Projects\springboot-backend-bookApi)
+2024-03-06 11:06:24,366 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-06 11:06:25,390 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-06 11:06:25,460 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2024-03-06 11:06:25,758 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'persistenceJPAConfig' of type [bookApi.Configuration.PersistenceJPAConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [exceptionTranslation] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-03-06 11:06:26,123 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-03-06 11:06:26,134 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-06 11:06:26,136 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-03-06 11:06:26,136 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-03-06 11:06:26,222 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-03-06 11:06:26,223 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1804 ms
+2024-03-06 11:06:26,359 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-06 11:06:26,422 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-06 11:06:26,462 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-03-06 11:06:26,810 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-06 11:06:27,058 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-06 11:06:28,135 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-06 11:06:28,215 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-06 11:06:28,884 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-06 11:06:29,247 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@72364a40, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ad2cb6d, org.springframework.security.web.context.SecurityContextHolderFilter@6cb2d5ea, org.springframework.security.web.header.HeaderWriterFilter@7926d092, org.springframework.web.filter.CorsFilter@4b6ad2eb, org.springframework.security.web.authentication.logout.LogoutFilter@499f9003, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@57e2d15c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e9bff08, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54151d07, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61868687, org.springframework.security.web.session.SessionManagementFilter@1018552d, org.springframework.security.web.access.ExceptionTranslationFilter@505bc480, org.springframework.security.web.access.intercept.AuthorizationFilter@157e0f6b]
+2024-03-06 11:06:29,634 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-06 11:06:29,690 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2024-03-06 11:06:29,706 INFO o.s.b.StartupInfoLogger [main] Started BookApiApplication in 6.01 seconds (process running for 8.184)
+2024-03-06 11:07:30,973 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-03-06 11:07:31,028 INFO o.s.b.StartupInfoLogger [main] Starting BookApiApplication using Java 21.0.1 with PID 12796 (G:\Projects\springboot-backend-bookApi\book-api\target\classes started by internet in G:\Projects\springboot-backend-bookApi)
+2024-03-06 11:07:31,030 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-06 11:07:32,068 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-06 11:07:32,141 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2024-03-06 11:07:32,495 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'persistenceJPAConfig' of type [bookApi.Configuration.PersistenceJPAConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [exceptionTranslation] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-03-06 11:07:32,972 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-03-06 11:07:32,983 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-06 11:07:32,985 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-03-06 11:07:32,986 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-03-06 11:07:33,061 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-03-06 11:07:33,062 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1973 ms
+2024-03-06 11:07:33,226 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-06 11:07:33,296 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-06 11:07:33,341 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-03-06 11:07:33,697 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-06 11:07:33,985 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-06 11:07:35,137 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-06 11:07:35,227 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-06 11:07:35,926 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-06 11:07:36,311 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@61868687, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2122b4bd, org.springframework.security.web.context.SecurityContextHolderFilter@54151d07, org.springframework.security.web.header.HeaderWriterFilter@3ce4b0a8, org.springframework.web.filter.CorsFilter@5dd79a57, org.springframework.security.web.authentication.logout.LogoutFilter@7e474bd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3d339541, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a345c6c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b26839d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40b7e68c, org.springframework.security.web.session.SessionManagementFilter@6cb2d5ea, org.springframework.security.web.access.ExceptionTranslationFilter@58a93f51, org.springframework.security.web.access.intercept.AuthorizationFilter@47184859]
+2024-03-06 11:07:36,693 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-06 11:07:36,739 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2024-03-06 11:07:36,751 INFO o.s.b.StartupInfoLogger [main] Started BookApiApplication in 6.4 seconds (process running for 8.877)
+2024-03-06 11:07:57,270 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 11:07:57,271 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-03-06 11:07:57,272 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2024-03-06 11:07:57,297 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Securing GET /api/books
+2024-03-06 11:07:57,613 DEBUG o.s.s.a.d.AbstractUserDetailsAuthenticationProvider [http-nio-8080-exec-1] Authenticated user
+2024-03-06 11:07:57,614 DEBUG o.s.s.w.a.w.BasicAuthenticationFilter [http-nio-8080-exec-1] Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=admin, password=$2a$10$F3L.1FipOGVxa/cphHizwOsYeAWoK82KTRb5RPwcTxDDDSOCTwod2, name=Admin, email=admin@mycompany.com, authorities=[ADMIN]), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ADMIN]]
+2024-03-06 11:07:57,618 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Secured GET /api/books
+2024-03-06 11:08:03,959 INFO b.r.BookController [http-nio-8080-exec-1] An INFO Message
+2024-03-06 11:08:03,960 WARN b.r.BookController [http-nio-8080-exec-1] A WARN Message
+2024-03-06 11:08:03,960 ERROR b.r.BookController [http-nio-8080-exec-1] An ERROR Message
+2024-03-06 11:08:31,160 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-03-06 11:08:31,250 INFO o.s.b.StartupInfoLogger [main] Starting BookApiApplication using Java 21.0.1 with PID 16720 (G:\Projects\springboot-backend-bookApi\book-api\target\classes started by internet in G:\Projects\springboot-backend-bookApi)
+2024-03-06 11:08:31,252 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-06 11:08:32,490 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-06 11:08:32,595 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 95 ms. Found 2 JPA repository interfaces.
+2024-03-06 11:08:32,938 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'persistenceJPAConfig' of type [bookApi.Configuration.PersistenceJPAConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [exceptionTranslation] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-03-06 11:08:33,326 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-03-06 11:08:33,337 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-06 11:08:33,339 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-03-06 11:08:33,339 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-03-06 11:08:33,412 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-03-06 11:08:33,413 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2099 ms
+2024-03-06 11:08:33,557 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-06 11:08:33,623 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-06 11:08:33,667 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-03-06 11:08:34,022 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-06 11:08:34,278 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-06 11:08:35,497 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-06 11:08:35,631 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-06 11:08:36,458 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-06 11:08:36,854 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15a87fbb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d92bfaf, org.springframework.security.web.context.SecurityContextHolderFilter@4a2bc71f, org.springframework.security.web.header.HeaderWriterFilter@1018552d, org.springframework.web.filter.CorsFilter@a23b96b, org.springframework.security.web.authentication.logout.LogoutFilter@47184859, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@15d0f2a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f213e97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@693c7741, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42af2977, org.springframework.security.web.session.SessionManagementFilter@157ff8f8, org.springframework.security.web.access.ExceptionTranslationFilter@533165e7, org.springframework.security.web.access.intercept.AuthorizationFilter@30b5f974]
+2024-03-06 11:08:37,317 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-06 11:08:37,377 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2024-03-06 11:08:37,389 INFO o.s.b.StartupInfoLogger [main] Started BookApiApplication in 6.885 seconds (process running for 12.018)
+2024-03-06 11:09:10,054 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 11:09:10,054 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-03-06 11:09:10,056 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2024-03-06 11:09:10,081 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Securing GET /api/books
+2024-03-06 11:09:10,397 DEBUG o.s.s.a.d.AbstractUserDetailsAuthenticationProvider [http-nio-8080-exec-1] Authenticated user
+2024-03-06 11:09:10,398 DEBUG o.s.s.w.a.w.BasicAuthenticationFilter [http-nio-8080-exec-1] Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=admin, password=$2a$10$F3L.1FipOGVxa/cphHizwOsYeAWoK82KTRb5RPwcTxDDDSOCTwod2, name=Admin, email=admin@mycompany.com, authorities=[ADMIN]), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ADMIN]]
+2024-03-06 11:09:10,401 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Secured GET /api/books
+2024-03-06 11:09:46,747 ERROR b.r.BookController [http-nio-8080-exec-1] we are not books in our database or we got some errors 
+2024-03-06 11:10:13,959 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-03-06 11:10:14,016 INFO o.s.b.StartupInfoLogger [main] Starting BookApiApplication using Java 21.0.1 with PID 17276 (G:\Projects\springboot-backend-bookApi\book-api\target\classes started by internet in G:\Projects\springboot-backend-bookApi)
+2024-03-06 11:10:14,017 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-06 11:10:15,222 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-06 11:10:15,294 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 62 ms. Found 2 JPA repository interfaces.
+2024-03-06 11:10:15,613 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'persistenceJPAConfig' of type [bookApi.Configuration.PersistenceJPAConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [exceptionTranslation] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-03-06 11:10:15,998 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-03-06 11:10:16,010 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-06 11:10:16,012 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-03-06 11:10:16,012 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-03-06 11:10:16,108 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-03-06 11:10:16,109 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2014 ms
+2024-03-06 11:10:16,267 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-06 11:10:16,367 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-06 11:10:16,421 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-03-06 11:10:16,835 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-06 11:10:17,223 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-06 11:10:18,734 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-06 11:10:18,807 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-06 11:10:19,558 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-06 11:10:19,952 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d6cac57, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@455591ad, org.springframework.security.web.context.SecurityContextHolderFilter@205d6f84, org.springframework.security.web.header.HeaderWriterFilter@17a756db, org.springframework.web.filter.CorsFilter@13157620, org.springframework.security.web.authentication.logout.LogoutFilter@37227aa7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6cbb79c3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74f54f8e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1252d480, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62a78446, org.springframework.security.web.session.SessionManagementFilter@2b33e616, org.springframework.security.web.access.ExceptionTranslationFilter@1a345c6c, org.springframework.security.web.access.intercept.AuthorizationFilter@61868687]
+2024-03-06 11:10:20,358 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-06 11:10:20,394 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2024-03-06 11:10:20,406 INFO o.s.b.StartupInfoLogger [main] Started BookApiApplication in 7.082 seconds (process running for 9.702)
+2024-03-06 11:10:23,085 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 11:10:23,085 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-03-06 11:10:23,087 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2024-03-06 11:10:23,124 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Securing GET /api/books
+2024-03-06 11:10:23,453 DEBUG o.s.s.a.d.AbstractUserDetailsAuthenticationProvider [http-nio-8080-exec-1] Authenticated user
+2024-03-06 11:10:23,454 DEBUG o.s.s.w.a.w.BasicAuthenticationFilter [http-nio-8080-exec-1] Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=admin, password=$2a$10$F3L.1FipOGVxa/cphHizwOsYeAWoK82KTRb5RPwcTxDDDSOCTwod2, name=Admin, email=admin@mycompany.com, authorities=[ADMIN]), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ADMIN]]
+2024-03-06 11:10:23,458 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Secured GET /api/books
+2024-03-06 11:10:38,184 ERROR b.r.BookController [http-nio-8080-exec-1] we are not books in our database or we got some errors 
+2024-03-06 11:11:06,440 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-03-06 11:11:06,510 INFO o.s.b.StartupInfoLogger [main] Starting BookApiApplication using Java 21.0.1 with PID 8008 (G:\Projects\springboot-backend-bookApi\book-api\target\classes started by internet in G:\Projects\springboot-backend-bookApi)
+2024-03-06 11:11:06,511 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-06 11:11:07,844 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-06 11:11:07,913 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2024-03-06 11:11:08,239 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'persistenceJPAConfig' of type [bookApi.Configuration.PersistenceJPAConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [exceptionTranslation] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-03-06 11:11:08,641 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-03-06 11:11:08,652 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-06 11:11:08,654 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-03-06 11:11:08,655 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-03-06 11:11:08,730 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-03-06 11:11:08,730 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2141 ms
+2024-03-06 11:11:08,894 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-06 11:11:08,959 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-06 11:11:09,001 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-03-06 11:11:09,348 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-06 11:11:09,623 WARN o.h.d.Dialect [main] HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-06 11:11:10,679 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-06 11:11:10,759 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-06 11:11:11,400 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-06 11:11:11,764 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@a23b96b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42af2977, org.springframework.security.web.context.SecurityContextHolderFilter@3f213e97, org.springframework.security.web.header.HeaderWriterFilter@2d2afbdf, org.springframework.web.filter.CorsFilter@14acc33e, org.springframework.security.web.authentication.logout.LogoutFilter@11564455, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@408708a1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d3b4646, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@175c4ae5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cbb79c3, org.springframework.security.web.session.SessionManagementFilter@67263db7, org.springframework.security.web.access.ExceptionTranslationFilter@1018552d, org.springframework.security.web.access.intercept.AuthorizationFilter@57e2d15c]
+2024-03-06 11:11:12,168 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-06 11:11:12,207 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2024-03-06 11:11:12,223 INFO o.s.b.StartupInfoLogger [main] Started BookApiApplication in 6.777 seconds (process running for 12.805)
+2024-03-06 11:11:17,587 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 11:11:17,588 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-03-06 11:11:17,589 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2024-03-06 11:11:17,623 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Securing GET /api/books
+2024-03-06 11:11:17,939 DEBUG o.s.s.a.d.AbstractUserDetailsAuthenticationProvider [http-nio-8080-exec-1] Authenticated user
+2024-03-06 11:11:17,940 DEBUG o.s.s.w.a.w.BasicAuthenticationFilter [http-nio-8080-exec-1] Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=admin, password=$2a$10$F3L.1FipOGVxa/cphHizwOsYeAWoK82KTRb5RPwcTxDDDSOCTwod2, name=Admin, email=admin@mycompany.com, authorities=[ADMIN]), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ADMIN]]
+2024-03-06 11:11:17,943 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] Secured GET /api/books
+2024-03-06 11:11:22,215 INFO b.r.BookController [http-nio-8080-exec-1] books fetched successfully

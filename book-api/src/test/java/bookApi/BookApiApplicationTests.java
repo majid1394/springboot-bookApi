@@ -15,15 +15,12 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @Disabled
 @SpringBootTest  //@SpringBootTest` annotation is used to load the Spring application context for testing
-
-
-
 /*
 @AutoConfigureMockMvc
 @TestPropertySource(
         locations = "classpath:application-integrationtest.properties")*/
 
-
+//configration test that shows every config in our app works properly
 class BookApiApplicationTests {
 
     @Test
